@@ -1,0 +1,202 @@
+
+/*------------------------------------ 
+Basic Structure ----------------------
+--------------------------------------
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/*------------------------------------ 
+HTML Font Style ----------------------
+--------------------------------------
+*/
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width:400px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width: 340px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*------------------------------------ 
+Root variables ----------------------
+--------------------------------------
+*/
+
+:root {
+  --white-color: #ffffff;
+  --gradient-color:linear-gradient(90deg, hsla(61, 91%, 54%, 1) 0%, hsla(95, 98%, 41%, 1) 100%);
+  --color-black:#0000;
+  --success-color: rgb(110, 199, 8) ;
+  --error-color: #ff0000;
+  --mini-similar: 0.5rem;
+  --basic-shadow: rgba(46, 228, 76, 0.14) 0px 0px 0px 7px;
+  --gutter-similar: 1rem;
+  --gutter-similar-big: 2rem;
+  --gutter-similar-huge-mini: 3rem;
+  --gutter-similar-huge: 4rem;
+  --gutter-similar-huge-big: 5rem;
+  --midium-gray: #777;
+  --basic-font-size: 1.4rem;
+  --font-color: #fed;
+  
+}
+
+/*------------------------------------ 
+Body Styling -------------------------
+--------------------------------------
+*/
+
+body {
+  background-color:rgb(179, 243, 149);
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: auto;
+  
+}
+
+/*------------------------------------ 
+Container Styling --------------------
+--------------------------------------
+*/
+
+.container {
+  background-color:rgb(17, 16, 17);
+  border-radius: var(--gutter-similar);
+  box-shadow: var(--basic-shadow);
+  width: 37rem;
+  height: 50rem;
+
+}
+/*------------------------------------ 
+  h2 Styling -------------------------
+--------------------------------------
+*/
+
+h2 {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: var(--gutter-similar-huge-mini);
+  margin-bottom:var(--gutter-similar-huge-big);
+ 
+}
+/*------------------------------------ 
+FORM Styling -------------------------
+--------------------------------------
+*/
+form {
+  padding: var(--gutter-similar-big) var(--gutter-similar-huge)
+}
+/*------------------------------------ 
+Form control Styling -----------------
+--------------------------------------
+*/
+.form-control {
+  margin-bottom:var(--gutter-similar);
+  padding-bottom: var(--gutter-similar);
+  position: relative;
+}
+/*------------------------------------ 
+FORM Control label--------------------
+--------------------------------------
+*/
+.form-control label {
+  color:var(--white-color);
+  font-size: var(--basic-font-size);
+  font-weight: 400;
+  display: block;
+  margin-bottom: var(--gutter-similar);
+}
+/*------------------------------------ 
+FORM control label input--------------
+--------------------------------------
+*/
+.form-control input {
+  border: 2px solid var(--font-color);
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border-bottom-right-radius: var(--gutter-similar);
+  border-top-left-radius: var(--gutter-similar);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*------------------------------------ 
+FORM control Focus--------------------
+--------------------------------------
+*/
+.form-control input:focus {
+  outline: 0;
+  color: --;
+}
+/*------------------------------------ 
+FORM control sucess--------------------
+--------------------------------------
+*/
+.form-control.success input {
+ border:3px solid  var(--success-color);
+}
+/*------------------------------------ 
+FORM control error--------------------
+--------------------------------------
+*/
+.form-control.error input {
+  border:3px solid var(--error-color);
+}
+/*------------------------------------ 
+FORM control small--------------------
+--------------------------------------
+*/
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  font-size: 1.3rem;
+  top: 1;
+  left: 0;
+  visibility:hidden; 
+}
+.form-control.error small {
+  visibility: visible;
+}
+
+
+/*------------------------------------ 
+FORM BUTTON Styling -------------------------
+--------------------------------------
+*/
+form button {
+  display: block;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin: auto;
+  border: 2px solid  var(--success-color);
+  background-color: var(--gradient-color);
+  padding: 0.5rem 1rem;
+  width: 30%;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-top: var(--gutter-similar-big);
+
+}
+ button:hover{
+ box-shadow:var(--basic-shadow) ;
+}
